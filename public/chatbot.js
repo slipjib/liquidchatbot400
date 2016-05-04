@@ -6,7 +6,7 @@ $(document).ready(function() {
     $("#chatbot1").submit(function() {
         event.preventDefault();
         var result;
-        value = $("#txtbox").val();
+        value = $("#txtbox").val().toLowerCase();
 
         if ($(".progress").hasClass("1-1") && value === "hi") {
             result = "hello, how are you?";
@@ -32,21 +32,25 @@ $(document).ready(function() {
 
     //chatbot 2
     if ($('form').attr("id") === "chatbot2" && $(".progress").hasClass("1-1")) {
-      var landresult1 = "Welcome to liquid chatbot 400, your source of mental defragmentation. ";
-      var landresult2 = "Enter your corporate passphrase.";
+        var landresult1 = "Welcome to liquid chatbot 400, your source of mental defragmentation. ";
+        var landresult2 = "Enter your corporate passphrase.";
         $("#resbox").append(landresult1 + "<br>" + landresult2 + "<br><hr>");
-        speak(landresult1 + landresult2, { pitch: 20 });
+        speak(landresult1 + landresult2, {
+            pitch: 20
+        });
     };
     $("#chatbot2").submit(function() {
         event.preventDefault();
         var result;
-        value = $("#txtbox").val();
+        value = $("#txtbox").val().toLowerCase();
 
         if ($(".progress").hasClass("1-1") && value.indexOf('SJ1995') !== -1) {
             result = "ERROR! RESTRICTED ACCESS. PLEASE ENTER RECOVERY PASSWORD.";
 
             $("#resbox").append(result + "<br><hr>");
-            speak(result, { pitch: 20 });
+            speak(result, {
+                pitch: 20
+            });
             $(".progress").removeClass("1-1").addClass("1-2");
             $("#txtbox").val("");
 
@@ -74,10 +78,14 @@ $(document).ready(function() {
             result17 = "INITIALIZING LOADING SEQUENCE...................";
 
             $("#resbox").append(result1 + "<br>");
-            speak(result1, { pitch: 20 });
+            speak(result1, {
+                pitch: 20
+            });
             window.setTimeout(function() {
                 $("#resbox").append(result2 + "<br>");
-                speak(result2, { pitch: 20 });
+                speak(result2, {
+                    pitch: 20
+                });
             }, 1000);
             window.setTimeout(function() {
                 $("#resbox").append(result3 + "<br>");
@@ -93,7 +101,9 @@ $(document).ready(function() {
             }, 5000);
             window.setTimeout(function() {
                 $("#resbox").append(result7 + "<br><br><br><br><br>");
-                speak(result7, { pitch: 20 });
+                speak(result7, {
+                    pitch: 20
+                });
             }, 5500);
             window.setTimeout(function() {
                 $("#resbox").append(result8 + "<br>");
@@ -121,13 +131,17 @@ $(document).ready(function() {
             }, 7750);
             window.setTimeout(function() {
                 $("#resbox").append(result16 + "<br>");
-                speak(result16, { pitch: 20 });
+                speak(result16, {
+                    pitch: 20
+                });
             }, 8000);
             window.setTimeout(function() {
                 $("#resbox").append(result17 + "<br>");
             }, 8250);
             window.setTimeout(function() {
-                speak(result17, { pitch: 20 });
+                speak(result17, {
+                    pitch: 20
+                });
             }, 9250);
         } else if ($(".progress").hasClass("1-3") && value.indexOf('wireframe') !== -1) {
             $("#txtbox").val("");
@@ -138,7 +152,9 @@ $(document).ready(function() {
 
             $("#resbox").empty();
             $("#resbox").append(result1 + "<br>");
-            speak(result1, { pitch: 20 });
+            speak(result1, {
+                pitch: 20
+            });
             window.setTimeout(function() {
                 $("#resbox").append(result2 + "<br>");
             }, 1000);
@@ -156,7 +172,9 @@ $(document).ready(function() {
             }, 5000);
             window.setTimeout(function() {
                 $("#resbox").append(result3 + "<br><hr>");
-                speak(result3, { pitch: 20 });
+                speak(result3, {
+                    pitch: 20
+                });
                 $(".progress").removeClass("1-3").addClass("1-4");
             }, 5500);
 
@@ -170,7 +188,9 @@ $(document).ready(function() {
             result4 = "PLEASE ENTER A PASSWORD FOR EMOTIONAL OVERRIDE PROTOCOL-198";
 
             $("#resbox").append(result1 + "<br>");
-            speak(result1, { pitch: 20 });
+            speak(result1, {
+                pitch: 20
+            });
             window.setTimeout(function() {
                 $("#resbox").append(result2 + "<br>");
             }, 1000);
@@ -188,13 +208,17 @@ $(document).ready(function() {
             }, 5000);
             window.setTimeout(function() {
                 $("#resbox").append(result3 + "<br><br><br><br>");
-                speak(result17, { pitch: 20 });
+                speak(result17, {
+                    pitch: 20
+                });
             }, 5500);
             window.setTimeout(function() {
                 $("#resbox").append(result4 + "<br><hr>");
             }, 5500);
             window.setTimeout(function() {
-                speak(result4, { pitch: 20 });
+                speak(result4, {
+                    pitch: 20
+                });
             }, 6750);
 
         } else if ($(".progress").hasClass("1-5")) {
@@ -217,7 +241,9 @@ $(document).ready(function() {
             window.setTimeout(function() {
                 $("#resbox").append(result4 + "<br><hr>");
             }, 3000);
-            speak(result1 + result2 + result3 + result4, { pitch: 20 });
+            speak(result1 + result2 + result3 + result4, {
+                pitch: 20
+            });
 
         } else if ($(".progress").hasClass("1-6") && value.indexOf('yes') !== -1) {
             $(".progress").removeClass("1-6").addClass("1-7");
@@ -338,15 +364,17 @@ $(document).ready(function() {
                 $("#resbox").append(result22 + "<br>");
             }, 11250);
             var result23 = result1 + result2 + result4 + result5 + result6 + result7 + result8 + result9 + result10 + result11 + result12 + result13 + result14 + result15 + result16 + result17 + result18 + result19 + result20 + result21 + result22;
-            speak(result23.toLowerCase(), { pitch: 20 });
+            speak(result23.toLowerCase(), {
+                pitch: 20
+            });
 
-      } else if ($(".progress").hasClass("1-6") && value.indexOf('no') !== -1) {
-          $(".progress").removeClass("1-6").addClass("1-7");
-          $("#txtbox").val("");
-          $("#resbox").empty();
-          $("#resbox").append("GOODBYE" + "<br><hr>");
-          $("#txtbox").remove();
-          $("#resbox").append('<img src="http://1morecastle.com/wp-content/uploads/2012/11/Game-Over.png">');
-      };
+        } else if ($(".progress").hasClass("1-6") && value.indexOf('no') !== -1) {
+            $(".progress").removeClass("1-6").addClass("1-7");
+            $("#txtbox").val("");
+            $("#resbox").empty();
+            $("#resbox").append("GOODBYE" + "<br><hr>");
+            $("#txtbox").remove();
+            $("#resbox").append('<img src="http://1morecastle.com/wp-content/uploads/2012/11/Game-Over.png">');
+        };
     });
 });
