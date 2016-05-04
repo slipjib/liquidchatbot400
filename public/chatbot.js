@@ -370,7 +370,7 @@ $(document).ready(function() {
                 $('.gameoverimg').animateRotate(360, 10000);
             }, 20000);
             window.setTimeout(function() {
-                $(body).fadeOut(10000);
+                $('body').fadeOut(10000);
             }, 30000);
 
         } else if ($(".progress").hasClass("1-7") && value.indexOf('no') !== -1) {
