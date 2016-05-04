@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <%#= title of website %>
+    <title>Brodie's Website Incorporated</title>
+
+    <%#= load Bootstrap css file %>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <div id="audio"></div>
+    <%#= place all contents inside container (for Bootstrap formatting) %>
+    <div class="container">
+
+      <%#= navbar %>
+        <nav class="navbar navbar-default navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="/">
+                Home
+              </a>
+            </div>
+            <ul class="nav navbar-nav">
+             <li><a href="<%= :dino %>">
+               dino
+             </a></li>
+             <li><a href="<%= :chatbot %>">
+               chatbot
+             </a></li>
+             <li><a href="<%= :chatbot2 %>">
+               chatbot2
+             </a></li>
+           </ul>
+          </div>
+
+        </nav>
+
+    <%#= yield will render the Ruby code! %>
+         <%= yield %>
+
+    </div>
+    <%#= load Bootstrap javasript file %>
+    <script src="jquery-2.2.3.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="speakClient.js"></script>
+    <script src="speakGenerator.js"></script>
+    <script src="speakWorker.js"></script>
+    <script src="chatbot.js"></script>
+  </body>
+</html>
+
+<%#= this html layout will be applied to all pages %>
+<%#= page specific content is rendered via the 'yield' tag %>
