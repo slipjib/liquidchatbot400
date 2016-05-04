@@ -3,31 +3,8 @@ $(document).ready(function() {
     if ($('form').attr("id") === "chatbot1" && $(".progress").hasClass("1-1")) {
         $("#resbox").append("What're you looking at?" + "<br>");
     }
+
     $("#chatbot1").submit(function() {
-        event.preventDefault();
-        var result;
-        value = $("#txtbox").val().toLowerCase();
-
-        if ($(".progress").hasClass("1-1") && value === "hi") {
-            result = "hello, how are you?";
-            $("#resbox").append(result + "<br><hr>");
-            $(".progress").removeClass("1-1").addClass("1-2");
-
-        } else if ($(".progress").hasClass("1-1") && value === "fuck you") {
-            result = "We're really not starting things off on the right foot. You are not the true ridge racer";
-            $("#resbox").append(result + "<br><hr>");
-            $(".progress").removeClass("1-1").addClass("1-3");
-
-        } else if ($(".progress").hasClass("1-3") && value === "sure i am") {
-            result = "Prove it with your philosophical banter! What is life?";
-            $("#resbox").append(result + "<br><hr>");
-            $(".progress").removeClass("1-1").addClass("1-4");
-
-        } else if ($(".progress").hasClass("1-2") && value === "good") {
-            result = "cool";
-            $("#resbox").append(result + "<br><hr>");
-            $(".progress").removeClass("1-1").addClass("1-2");
-        };
     });
 
     //chatbot 2
@@ -44,7 +21,7 @@ $(document).ready(function() {
         var result;
         value = $("#txtbox").val().toLowerCase();
 
-        if ($(".progress").hasClass("1-1") && value.indexOf('SJ1995') !== -1) {
+        if ($(".progress").hasClass("1-1") && value.indexOf('sj1995') !== -1) {
             result = "ERROR! RESTRICTED ACCESS. PLEASE ENTER RECOVERY PASSWORD.";
 
             $("#resbox").append(result + "<br><hr>");
@@ -54,7 +31,7 @@ $(document).ready(function() {
             $(".progress").removeClass("1-1").addClass("1-2");
             $("#txtbox").val("");
 
-        } else if ($(".progress").hasClass("1-2") && value.indexOf('5L1PJ1B') !== -1) {
+        } else if ($(".progress").hasClass("1-2") && value.indexOf('slipjib') !== -1) {
             $(".progress").removeClass("1-2").addClass("1-3");
             $("#txtbox").val("");
 
