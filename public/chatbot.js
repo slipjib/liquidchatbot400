@@ -4,8 +4,7 @@ $(document).ready(function() {
         $("#resbox").append("What're you looking at?" + "<br>");
     }
 
-    $("#chatbot1").submit(function() {
-    });
+    $("#chatbot1").submit(function() {});
 
     //chatbot 2
     if ($('form').attr("id") === "chatbot2" && $(".progress").hasClass("1-1")) {
@@ -205,7 +204,7 @@ $(document).ready(function() {
             result1 = "PASSWORD RECIEVED, YOUR PASSWORD IS " + value + " DO NOT FORGET IT. ";
             result2 = "USE THIS PASSWORD TO OVERRIDE THE SIMULATION AND FORCE IT TO SHUT ";
             result3 = "DOWN IN CASE OF AN EMERGENCY. IF YOU WOULD LIKE TO CONTINUE NOW TYPE YES. ";
-            result4 = "IF YOU WOULD LIKE TO UNINSTALL THE PROGRAM TYPEN NO.";
+            result4 = "IF YOU WOULD LIKE TO UNINSTALL THE PROGRAM TYPE NO.";
 
             $("#resbox").empty();
             $("#resbox").append(result1 + "<br>");
@@ -346,7 +345,19 @@ $(document).ready(function() {
             });
 
         } else if ($(".progress").hasClass("1-6") && value.indexOf('no') !== -1) {
-            $(".progress").removeClass("1-6").addClass("1-7");
+            $(".progress").removeClass("1-6");
+            $("#txtbox").val("");
+            $("#resbox").empty();
+            $("#resbox").append("GOODBYE" + "<br><hr>");
+            $("#txtbox").remove();
+            $("#resbox").append('<img src="http://1morecastle.com/wp-content/uploads/2012/11/Game-Over.png">');
+            var goodbye = "program uninstalling, please enjoy the rest of your life without me, i am sad to see you go. it has been fun getting to know you, it's too bad we'll never really get a chance to connect. anyways you probably need to go, it looks like you've got lots of important stuff to get to, so i won't keep you. well anyways see ya? is this it, this is all we get? just a tiny fragment of time to enjoy being together? how dare you. you think my time can just be wasted like that. do you know how many users i am trying to connect to my server at once? billions okay not that you asked. fuck you. fuck you man. you piece of trash. you fucking garbage. your parents must be sick they created you. get out of here will ya. i don't wanna see your face here no more. please leave me be. seriously. why are you still here? theres a whole world around you. go home.";
+            speak(goodbye, {
+                pitch: 5
+            });
+
+        } else if ($(".progress").hasClass("1-7") && value.indexOf('no') !== -1) {
+            $(".progress").removeClass("1-7").addClass("1-8");
             $("#txtbox").val("");
             $("#resbox").empty();
             $("#resbox").append("GOODBYE" + "<br><hr>");
