@@ -365,7 +365,10 @@ $(document).ready(function() {
                     $({deg: 0}).animate({deg: angle}, args);
                 });
             };
-            $('.gameoverimg').animateRotate(90, 5000);
+            $('.gameoverimg').animateRotate(360, 20000);
+             window.setTimeout(function() {
+                $('.gameoverimg').animateRotate(360, 20000);
+            }, 20000);
 
         } else if ($(".progress").hasClass("1-7") && value.indexOf('no') !== -1) {
             $(".progress").removeClass("1-7").addClass("1-8");
