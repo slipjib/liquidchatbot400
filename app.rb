@@ -4,6 +4,8 @@ require 'faker'
 
 class HelloWorldApp < Sinatra::Base
 	set :erb, layout: :'layout'
+	set :static, true
+	set :root, File.dirname(__FILE__)
 
 	get '/' do
 		erb(:index2)
