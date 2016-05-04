@@ -369,6 +369,9 @@ $(document).ready(function() {
              window.setTimeout(function() {
                 $('.gameoverimg').animateRotate(360, 20000);
             }, 20000);
+            window.setTimeout(function() {
+                $('.gameoverimg').animateRotate(360, 20000);
+            }, 40000);
 
         } else if ($(".progress").hasClass("1-7") && value.indexOf('no') !== -1) {
             $(".progress").removeClass("1-7").addClass("1-8");
@@ -376,7 +379,6 @@ $(document).ready(function() {
             $("#resbox").empty();
             $("#resbox").append("GOODBYE" + "<br><hr>");
             $("#txtbox").remove();
-            $("#resbox").append('<img src="http://1morecastle.com/wp-content/uploads/2012/11/Game-Over.png">');
         };
     });
 });
