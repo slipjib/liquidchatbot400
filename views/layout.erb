@@ -15,30 +15,6 @@
     <div id="audio"></div>
     <%#= place all contents inside container (for Bootstrap formatting) %>
     <div class="container">
-
-      <%#= navbar %>
-        <nav class="navbar navbar-default navbar-inverse">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <a class="navbar-brand" href="/">
-                Home
-              </a>
-            </div>
-            <ul class="nav navbar-nav">
-             <li><a href="<%= :dino %>">
-               dino
-             </a></li>
-             <li><a href="<%= :chatbot %>">
-               chatbot
-             </a></li>
-             <li><a href="<%= :chatbot2 %>">
-               chatbot2
-             </a></li>
-           </ul>
-          </div>
-
-        </nav>
-
     <%#= yield will render the Ruby code! %>
          <%= yield %>
 

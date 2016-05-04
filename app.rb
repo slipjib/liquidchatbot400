@@ -9,19 +9,11 @@ class HelloWorldApp < Sinatra::Base
 	set :root, File.dirname(__FILE__)
 
 	get '/' do
-		erb(:index2)
-	end
-
-	get '/dino' do
-		erb(:index)
-	end
-
-	get '/chatbot' do
-		erb(:index3)
-	end
-
-	get '/chatbot2' do
 		erb(:index4)
+	end
+
+	get '/1' do
+		erb(:index3)
 	end
 end
 
