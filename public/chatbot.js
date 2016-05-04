@@ -123,8 +123,7 @@ $(document).ready(function() {
             $("#txtbox").val("");
 
             result1 = "ENABLING WIREFRAME VIEW";
-            result2 = "...................................";
-            result3 = "WIREFRAME VIEW ENABLED";
+            result2 = "WIREFRAME VIEW ENABLED";
 
             $("#resbox").empty();
             $("#resbox").append(result1 + "<br>");
@@ -132,23 +131,23 @@ $(document).ready(function() {
                 pitch: 20
             });
             window.setTimeout(function() {
-                $("#resbox").append(result2 + "<br>");
+                $("#resbox").append("<br>");
             }, 1000);
             window.setTimeout(function() {
-                $("#resbox").append(result2 + "<br>");
+                $("#resbox").append("<hr>");
             }, 2000);
             window.setTimeout(function() {
-                $("#resbox").append(result2 + "<br>");
+                $("#resbox").append("<hr>");
             }, 3000);
             window.setTimeout(function() {
-                $("#resbox").append(result2 + "<br>");
+                $("#resbox").append("<hr>");
             }, 4000);
             window.setTimeout(function() {
-                $("#resbox").append(result2 + "<br>");
+                $("#resbox").append("<hr>");
             }, 5000);
             window.setTimeout(function() {
-                $("#resbox").append(result3 + "<br><hr>");
-                speak(result3, {
+                $("#resbox").append(result2 + "<br><hr>");
+                speak(result2, {
                     pitch: 20
                 });
                 $(".progress").removeClass("1-3").addClass("1-4");
@@ -159,40 +158,39 @@ $(document).ready(function() {
             $("#txtbox").val("");
 
             result1 = "ENABLING TEXTURE SUPPORT";
-            result2 = "...................................";
-            result3 = "TEXTURE SUPPORT ENABLED";
-            result4 = "PLEASE ENTER A PASSWORD FOR EMOTIONAL OVERRIDE PROTOCOL-198";
+            result2 = "TEXTURE SUPPORT ENABLED";
+            result3 = "PLEASE ENTER A PASSWORD FOR EMOTIONAL OVERRIDE PROTOCOL-198";
 
             $("#resbox").append(result1 + "<br>");
             speak(result1, {
                 pitch: 20
             });
             window.setTimeout(function() {
-                $("#resbox").append(result2 + "<br>");
+                $("#resbox").append("<hr>");
             }, 1000);
             window.setTimeout(function() {
-                $("#resbox").append(result2 + "<br>");
+                $("#resbox").append("<hr>");
             }, 2000);
             window.setTimeout(function() {
-                $("#resbox").append(result2 + "<br>");
+                $("#resbox").append("<hr>");
             }, 3000);
             window.setTimeout(function() {
-                $("#resbox").append(result2 + "<br>");
+                $("#resbox").append("<hr>");
             }, 4000);
             window.setTimeout(function() {
-                $("#resbox").append(result2 + "<br>");
+                $("#resbox").append("<hr>");
             }, 5000);
             window.setTimeout(function() {
-                $("#resbox").append(result3 + "<br><br><br><br>");
-                speak(result3, {
+                $("#resbox").append(result2 + "<br><br><br><br>");
+                speak(result2, {
                     pitch: 20
                 });
             }, 5500);
             window.setTimeout(function() {
-                $("#resbox").append(result4 + "<br><hr>");
+                $("#resbox").append(result3 + "<br><hr>");
             }, 5500);
             window.setTimeout(function() {
-                speak(result4, {
+                speak(result3, {
                     pitch: 20
                 });
             }, 6750);
