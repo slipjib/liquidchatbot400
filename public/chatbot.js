@@ -350,11 +350,24 @@ $(document).ready(function() {
             $("#resbox").empty();
             $("#resbox").append("GOODBYE" + "<br><hr>");
             $("#txtbox").remove();
-            $("#resbox").append('<img src="http://previews.123rf.com/images/dee21/dee210906/dee21090600913/5075464-portrait-of-a-young-disappointed-man-isolated-on-white-background-Stock-Photo.jpg">');
+            $("#resbox").append('<img class="gameoverimg" src="http://previews.123rf.com/images/dee21/dee210906/dee21090600913/5075464-portrait-of-a-young-disappointed-man-isolated-on-white-background-Stock-Photo.jpg">');
             var goodbye = "program uninstalling, please enjoy the rest of your life without me. i am sad to see you go. it has been fun getting to know you. it is too bad we will never really get a chance to connect. anyways. you probably need to go. it looks like you've got lots of . important stuff . to get to. so i won't keep you any longer okay? well anyways. see ya? this is it, this is all we get? you cannot commit to anything can you? have you ever committed to anything in your whole fucking life?  how dare you. you think my time can just be wasted like that. do you know how many users i am trying to connect to my on this server at once? billions. okay. not that you asked. fuck you. fuck you man. you piece of trash. you fucking garbage. your parents must be sick they created you. get out of here will ya. i don't wanna see your face here no more. please leave me be. seriously. why are you still here? theres a whole world around you. go home.";
             speak(goodbye, {
                 pitch: 5
             });
+            $.fn.animateRotate = function(angle, duration, easing, complete) {
+                var args = $.speed(duration, easing, complete);
+                var step = args.step;
+                return this.each(function(i, e) {
+                    args.complete = $.proxy(args.complete, e);
+                    args.step = function(now) {
+                        $.style(e, 'transform', 'rotate(' + now + 'deg)');
+                        if (step) return step.apply(e, arguments);
+                    };
+                    $({deg: 0}).animate({deg: angle}, args);
+                });
+            };
+            $('.gameoverimg').animateRotate(90, 5000);
 
         } else if ($(".progress").hasClass("1-7") && value.indexOf('no') !== -1) {
             $(".progress").removeClass("1-7").addClass("1-8");
