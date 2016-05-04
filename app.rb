@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require 'ruby_cowsay'
 require 'faker'
+require 'tilt/erb'
 
 class HelloWorldApp < Sinatra::Base
 	set :erb, layout: :'layout'
@@ -24,4 +25,6 @@ class HelloWorldApp < Sinatra::Base
 	end
 end
 
-HelloWorldApp.run!
+if __FILE__ == $0
+	HelloWorldApp.run!
+end
