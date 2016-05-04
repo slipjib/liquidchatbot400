@@ -205,7 +205,7 @@ $(document).ready(function() {
             result4 = "IF YOU WOULD LIKE TO UNINSTALL THE PROGRAM TYPE NO.";
 
             $("#resbox").empty();
-            $("#resbox").append(result1.toLowerCase() + "<br>");
+            $("#resbox").append(result1 + "<br>");
             window.setTimeout(function() {
                 $("#resbox").append(result2 + "<br>");
             }, 1000);
@@ -215,7 +215,7 @@ $(document).ready(function() {
             window.setTimeout(function() {
                 $("#resbox").append(result4 + "<br><hr>");
             }, 3000);
-            speak(result1 + result2 + result3 + result4, {
+            speak(result1.toLowerCase() + result2.toLowerCase() + result3.toLowerCase() + result4.toLowerCase(), {
                 pitch: 20
             });
 
