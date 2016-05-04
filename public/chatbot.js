@@ -73,10 +73,10 @@ $(document).ready(function() {
                 $("#resbox").append(result5 + "<br>");
             }, 4000);
             window.setTimeout(function() {
-                $("#resbox").append(result6 + "<br><br><br>");
+                $("#resbox").append(result6 + "<br><br>");
             }, 5000);
             window.setTimeout(function() {
-                $("#resbox").append(result7 + "<br><br><br><br><br>");
+                $("#resbox").append(result7 + "<br><br><br>");
                 speak(result7, {
                     pitch: 20
                 });
@@ -94,16 +94,16 @@ $(document).ready(function() {
                 $("#resbox").append(result11 + "<br>");
             }, 6750);
             window.setTimeout(function() {
-                $("#resbox").append(result12 + "<br><br><br>");
+                $("#resbox").append(result12 + "<br><br>");
             }, 7000);
             window.setTimeout(function() {
-                $("#resbox").append(result13 + "<br><br><br><br><br>");
+                $("#resbox").append(result13 + "<br><br><br>");
             }, 7250);
             window.setTimeout(function() {
                 $("#resbox").append(result14 + "<br>");
             }, 7500);
             window.setTimeout(function() {
-                $("#resbox").append(result15 + "<br><br><br><br><br><br><br><br><br>");
+                $("#resbox").append(result15 + "<br><br><br>");
             }, 7750);
             window.setTimeout(function() {
                 $("#resbox").append(result16 + "<br>");
