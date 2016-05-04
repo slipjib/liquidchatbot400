@@ -76,7 +76,7 @@ $(document).ready(function() {
                 $("#resbox").append(result6 + "<br><br>");
             }, 5000);
             window.setTimeout(function() {
-                $("#resbox").append(result7 + "<br><br><br>");
+                $("#resbox").append(result7 + "<br><br>");
                 speak(result7, {
                     pitch: 20
                 });
@@ -97,13 +97,13 @@ $(document).ready(function() {
                 $("#resbox").append(result12 + "<br><br>");
             }, 7000);
             window.setTimeout(function() {
-                $("#resbox").append(result13 + "<br><br><br>");
+                $("#resbox").append(result13 + "<br><br>");
             }, 7250);
             window.setTimeout(function() {
                 $("#resbox").append(result14 + "<br>");
             }, 7500);
             window.setTimeout(function() {
-                $("#resbox").append(result15 + "<br><br><br>");
+                $("#resbox").append(result15 + "<br><br>");
             }, 7750);
             window.setTimeout(function() {
                 $("#resbox").append(result16 + "<br>");
@@ -201,13 +201,13 @@ $(document).ready(function() {
             $(".progress").removeClass("1-5").addClass("1-6");
             $("#txtbox").val("");
 
-            result1 = "PASSWORD RECIEVED, YOUR PASSWORD IS " + value + " DO NOT FORGET IT. ";
+            result1 = "PASSWORD RECIEVED, YOUR PASSWORD IS " + value.toUpperCase() + " DO NOT FORGET IT. ";
             result2 = "USE THIS PASSWORD TO OVERRIDE THE SIMULATION AND FORCE IT TO SHUT ";
             result3 = "DOWN IN CASE OF AN EMERGENCY. IF YOU WOULD LIKE TO CONTINUE NOW TYPE YES. ";
             result4 = "IF YOU WOULD LIKE TO UNINSTALL THE PROGRAM TYPE NO.";
 
             $("#resbox").empty();
-            $("#resbox").append(result1 + "<br>");
+            $("#resbox").append(result1.toLowerCase() + "<br>");
             window.setTimeout(function() {
                 $("#resbox").append(result2 + "<br>");
             }, 1000);
