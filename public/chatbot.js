@@ -184,7 +184,7 @@ $(document).ready(function() {
             }, 5000);
             window.setTimeout(function() {
                 $("#resbox").append(result3 + "<br><br><br><br>");
-                speak(result17, {
+                speak(result3, {
                     pitch: 20
                 });
             }, 5500);
